@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MCJukebox">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/deps/MCJukebox.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
