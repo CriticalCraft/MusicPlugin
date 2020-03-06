@@ -1,0 +1,6 @@
+name: APIPlugin
+version: 1.0-SNAPSHOT
+main: me.woefie.apiplugin.APIPlugin
+api-version: 1.13
+depend:
+  - MCJukebox
