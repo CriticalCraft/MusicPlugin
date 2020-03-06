@@ -1,0 +1,12 @@
+1 lines (9 sloc) 82 Bytes
+# Project exclude paths
+/out/
+
+# Maven
+log/
+target/
+
+# Intellij
+.idea/
+*.iml
+*.iws
