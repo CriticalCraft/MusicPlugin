@@ -1,0 +1,6 @@
+name: BetterMusic
+version: 1.1-SNAPSHOT
+main: play.criticalcraft.bettermusic.BetterMusic
+api-version: 1.13
+depend:
+  - MCJukebox

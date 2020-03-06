@@ -1,0 +1,6 @@
+name: BetterMusic
+version: ${project.version}
+main: play.criticalcraft.bettermusic.BetterMusic
+api-version: 1.13
+depend:
+  - MCJukebox

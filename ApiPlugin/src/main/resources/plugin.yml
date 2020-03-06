@@ -1,6 +1,0 @@
-name: APIPlugin
-version: ${project.version}
-main: me.woefie.apiplugin.APIPlugin
-api-version: 1.13
-depend:
-  - MCJukebox
