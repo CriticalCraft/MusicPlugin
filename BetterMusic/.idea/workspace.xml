@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="baff7283-0555-4b25-b692-2d595771c581" name="Default Changelist" comment="" />
+    <list default="true" id="baff7283-0555-4b25-b692-2d595771c581" name="Default Changelist" comment="Added commands and trackmanager">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/CommanManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/SubCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/CheckBiomeSongs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/DeleteSong.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/storage/TrackStorageManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/BetterMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/BetterMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/AddSong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/AddSong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/BmCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Listeners/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Listeners/MusicPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/storage/TrackStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/storage/TrackStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/BetterMusic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/BetterMusic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/Commands/AddSong.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/Commands/BmCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/Listeners/MusicPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/Listeners/MusicPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/storage/TrackStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/storage/TrackStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-BetterMusic-1.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-BetterMusic-1.1-SNAPSHOT.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +40,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Woefie" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -24,6 +58,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1Ym64NnfHs8yyIsOcjG4Sw1Tl1S" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -31,6 +66,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/deps/MCJukebox.jar!/" />
@@ -88,17 +124,31 @@
       <option name="presentableId" value="Default" />
       <updated>1583535230585</updated>
       <workItem from="1583535233686" duration="2166000" />
+      <workItem from="1583537891559" duration="806000" />
+      <workItem from="1583572247816" duration="24567000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added commands and trackmanager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added commands and trackmanager" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1583535363290">
+    <state x="552" y="178" key="#SQL_Dialects" timestamp="1583622031140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583535363290" />
+    <state x="552" y="178" key="#SQL_Dialects/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583622031140" />
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583622120957">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583622120957" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1583594677894">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583594677894" />
     <state x="782" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583535297484">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -107,26 +157,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583536559940" />
+    <state x="551" y="114" key="CommitChangelistDialog2" timestamp="1583622095886">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="551" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583622095886" />
     <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1583535832106">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583535832106" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1583536631676">
+    <state width="1877" height="191" key="GridCell.Tab.0.bottom" timestamp="1583621943029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583536631676" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1583536631676">
+    <state width="1877" height="191" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583621943029" />
+    <state width="1877" height="191" key="GridCell.Tab.0.center" timestamp="1583621943029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583536631676" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1583536631676">
+    <state width="1877" height="191" key="GridCell.Tab.0.center/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583621943029" />
+    <state width="1877" height="191" key="GridCell.Tab.0.left" timestamp="1583621943029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583536631676" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1583536631676">
+    <state width="1877" height="191" key="GridCell.Tab.0.left/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583621943029" />
+    <state width="1877" height="191" key="GridCell.Tab.0.right" timestamp="1583621943029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583536631676" />
+    <state width="1877" height="191" key="GridCell.Tab.0.right/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583621943029" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1583535835891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

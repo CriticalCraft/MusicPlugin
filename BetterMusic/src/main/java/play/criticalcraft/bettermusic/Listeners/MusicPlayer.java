@@ -11,11 +11,13 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 
+import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import play.criticalcraft.bettermusic.BetterMusic;
 import play.criticalcraft.bettermusic.events.TimeEvent;
 import play.criticalcraft.bettermusic.storage.Track;
 import play.criticalcraft.bettermusic.storage.TrackStorage;
+import play.criticalcraft.bettermusic.storage.TrackStorageManager;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -49,6 +51,7 @@ public class MusicPlayer implements Listener {
 
 
     }
+
 
 
     @EventHandler
@@ -91,6 +94,7 @@ public class MusicPlayer implements Listener {
 
         if (musicPlaying != null) {
             media.setURL(musicPlaying.getUrl());
+            System.out.println(media.getFadeDuration());
             JukeboxAPI.play(p, media);
         } else {
             JukeboxAPI.stopMusic(p);
@@ -109,7 +113,7 @@ public class MusicPlayer implements Listener {
 
     private Track getRandomTrack(Biome biome) {
 
-        ArrayList<Track> tracks = TrackStorage.getTracks(biome, getWorldTime(p));
+        ArrayList<Track> tracks = TrackStorageManager.getInstance().getTracks(biome, getWorldTime(p));
 
 
 

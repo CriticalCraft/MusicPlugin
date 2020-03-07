@@ -4,3 +4,8 @@ main: play.criticalcraft.bettermusic.BetterMusic
 api-version: 1.13
 depend:
   - MCJukebox
+commands:
+  bm:
+    description: Base command for BetterMusic
+    usage: /<command>
+
