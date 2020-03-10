@@ -31,6 +31,10 @@ public class CheckBiomeSongs extends SubCommand {
     @Override
     public void perform(Player player, String[] args) {
 
+        if (player.hasPermission("bettermusic.bm.check")){
+
+
+
         if (args.length == 1) {
             Biome b = BetterMusic.i.playerBiomeTracker.getBiome(player);
             ArrayList<Track> tracks = TrackStorageManager.getInstance().listBiomeTracks(b.name().toLowerCase());
@@ -44,6 +48,9 @@ public class CheckBiomeSongs extends SubCommand {
             for (Track t : tracks) {
                 player.sendMessage(t.getName());
             }
+        }
+        }else{
+            player.sendMessage("You do not have the right permisisons!");
         }
 
 

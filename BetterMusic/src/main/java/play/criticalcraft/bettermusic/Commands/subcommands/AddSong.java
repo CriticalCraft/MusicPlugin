@@ -35,9 +35,15 @@ public class AddSong extends SubCommand {
 
     @Override
     public void perform(Player player, String[] args) {
-
-        TrackStorageManager.getInstance().insertTrack(player, args);
-
+        if (player.hasPermission("bettermusic.bm.add")) {
+            if (args.length >= 6) {
+                TrackStorageManager.getInstance().insertTrack(player, args);
+            }else {
+                player.sendMessage("Missing arguments");
+            }
+        }else{
+            player.sendMessage("You do not have the right permisisons!");
+        }
     }
 
     @Override
