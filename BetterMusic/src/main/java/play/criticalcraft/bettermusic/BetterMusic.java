@@ -13,6 +13,7 @@ import play.criticalcraft.bettermusic.storage.TrackStorageManager;
 import play.criticalcraft.bettermusic.tasks.TimeTask;
 
 import java.io.File;
+import java.util.Optional;
 
 public final class BetterMusic extends JavaPlugin {
 
@@ -25,15 +26,17 @@ public final class BetterMusic extends JavaPlugin {
         i = this;
         //getServer().getPluginManager().registerEvents(new MusicPlayer(p), this);
 
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
+
 
         getCommand("bm").setExecutor(new CommanManager());
 
-        BetterMusic.i = this;
 
         if (!new File(this.getDataFolder() + "/Music.db").exists()) {
             TrackStorage.createDB();
             TrackStorage.createTable();
-           }
+        }
         this.getServer().getPluginManager().registerEvents(new JoinListener(), this);
 
 
@@ -42,8 +45,6 @@ public final class BetterMusic extends JavaPlugin {
         for (final Player p : Bukkit.getOnlinePlayers()) {
             new MusicPlayer(p);
         }
-
-
 
 
     }

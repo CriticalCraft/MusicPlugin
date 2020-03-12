@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="baff7283-0555-4b25-b692-2d595771c581" name="Default Changelist" comment="">
+    <list default="true" id="baff7283-0555-4b25-b692-2d595771c581" name="Default Changelist" comment="Added commands and trackmanager">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/AddSong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/AddSong.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/CheckBiomeSongs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/CheckBiomeSongs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/DeleteSong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/DeleteSong.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT-shaded.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-BetterMusic-1.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-BetterMusic-1.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/BetterMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/BetterMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/BetterMusic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/BetterMusic.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +40,7 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -75,6 +73,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -123,6 +122,10 @@
       <workItem from="1583537891559" duration="806000" />
       <workItem from="1583572247816" duration="25008000" />
       <workItem from="1583664114919" duration="2543000" />
+      <workItem from="1583861505847" duration="816000" />
+      <workItem from="1583862852374" duration="1281000" />
+      <workItem from="1583941243123" duration="8000" />
+      <workItem from="1584049054370" duration="218000" />
     </task>
     <task id="LOCAL-00001" summary="Added commands and trackmanager">
       <created>1583622130448</created>
@@ -162,14 +165,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583536559940" />
-    <state x="551" y="114" key="CommitChangelistDialog2" timestamp="1583622129849">
+    <state x="551" y="114" key="CommitChangelistDialog2" timestamp="1583863532803">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="551" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583622129849" />
-    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1583535832106">
+    <state x="551" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583863532803" />
+    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1583863146048">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583535832106" />
+    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583863146048" />
     <state width="1877" height="191" key="GridCell.Tab.0.bottom" timestamp="1583666527867">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -186,13 +189,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="191" key="GridCell.Tab.0.right/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583666527867" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1583535835891">
+    <state x="440" y="94" key="SettingsEditor" timestamp="1583863478559">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583535835891" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583863478559" />
     <state x="776" y="297" key="chooseDestDirectoryDialog" timestamp="1583535335305">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="297" key="chooseDestDirectoryDialog/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583535335305" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583863494852">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1583863494852" />
   </component>
 </project>
