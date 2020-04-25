@@ -30,6 +30,9 @@ U will need a IDE with the minecraft pligin API and the external API from MCJuke
 
 ## Using the plugin
  
+ Variables that are required are <>
+ Variables that are optional are []
+ 
  There are 3 commands for the plugin
  - `/bm add  <name> <playlist/biome> <min> <sec> [time: day/night] <url>`
  - `/bm check [biome]`
