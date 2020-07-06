@@ -1,25 +1,25 @@
 package play.criticalcraft.bettermusic.Listeners;
 
 
-
 import net.mcjukebox.plugin.bukkit.api.JukeboxAPI;
 import net.mcjukebox.plugin.bukkit.api.ResourceType;
 import net.mcjukebox.plugin.bukkit.api.models.Media;
+import net.mcjukebox.shared.api.Region;
+import net.mcjukebox.shared.utils.RegionUtils;
 import org.bukkit.block.Biome;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 
-import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import play.criticalcraft.bettermusic.BetterMusic;
 import play.criticalcraft.bettermusic.events.TimeEvent;
 import play.criticalcraft.bettermusic.storage.Track;
-import play.criticalcraft.bettermusic.storage.TrackStorage;
 import play.criticalcraft.bettermusic.storage.TrackStorageManager;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -40,12 +40,12 @@ public class MusicPlayer implements Listener {
 
         this.musicPlaying = null;
         this.musicStarted = 0;
-        if (getTrack()!= null) {
+        if (getTrack() != null) {
             this.media = new Media(ResourceType.MUSIC, getTrack().getUrl());
 
-        media.setLooping(false);
-        media.setFadeDuration(2);
-        media.setVolume(30);
+            media.setLooping(false);
+            media.setFadeDuration(2);
+            media.setVolume(30);
         }
         getServer().getPluginManager().registerEvents(this, BetterMusic.i);
 
@@ -53,27 +53,29 @@ public class MusicPlayer implements Listener {
     }
 
 
-
     @EventHandler
     public void check(TimeEvent e) {
 
-        if(musicPlaying == null){
+        if (musicPlaying == null) {
             setMusicPlaying(getTrack());
             return;
         }
 
+
         long playing = System.currentTimeMillis() - musicStarted;
-        if(TimeUnit.MILLISECONDS.toSeconds(playing) >= musicPlaying.getDuration()){
+        if (TimeUnit.MILLISECONDS.toSeconds(playing) >= musicPlaying.getDuration()) {
             setMusicPlaying(getTrack());
         }
         Track next = getTrack();
 
-        if(next == null || !musicPlaying.getBiome().equals(next.getBiome())){
 
+        if (next == null || !musicPlaying.getBiome().equals(next.getBiome())) {
+            if (getTracks().contains(musicPlaying.getName())) {
+
+                return;
+            }
             setMusicPlaying(getTrack());
         }
-
-
 
 
     }
@@ -81,20 +83,23 @@ public class MusicPlayer implements Listener {
 
     private void setMusicPlaying(Track track) {
 
-        if(track != null){
-            System.out.println("Now playing: " + track.getName()+" for player: "+ p.getDisplayName());
-        }else{
-
+        if (track == null) {
             System.out.println("Now playing: Nothing");
 
+
         }
+
+
 
         musicPlaying = track;
         musicStarted = System.currentTimeMillis();
 
+
         if (musicPlaying != null) {
+            System.out.println("Now playing: " + musicPlaying.getName() + " for player: " + p.getDisplayName());
+
             media.setURL(musicPlaying.getUrl());
-            System.out.println(media.getFadeDuration());
+            //System.out.println(media.getFadeDuration());
             JukeboxAPI.play(p, media);
         } else {
             JukeboxAPI.stopMusic(p);
@@ -102,8 +107,8 @@ public class MusicPlayer implements Listener {
     }
 
 
-
     private Track getTrack() {
+        //String regio = RegionListener.getRegion(p.getLocation());
 
 
         biome = BetterMusic.i.playerBiomeTracker.getBiome(p);
@@ -111,11 +116,10 @@ public class MusicPlayer implements Listener {
         return getRandomTrack(biome);
     }
 
+
     private Track getRandomTrack(Biome biome) {
 
         ArrayList<Track> tracks = TrackStorageManager.getInstance().getTracks(biome, getWorldTime(p));
-
-
 
 
         if (tracks.size() == 0) {
@@ -125,9 +129,17 @@ public class MusicPlayer implements Listener {
         if (tracks.size() == 1) {
             return tracks.get(0);
         }
-        int random = new Random().nextInt(tracks.size() );
+        int random = new Random().nextInt(tracks.size());
         return tracks.get(random);
 
+    }
+
+    private ArrayList<String> getTracks() {
+        ArrayList<String> trackNames = new ArrayList<>();
+        for (Track track : TrackStorageManager.getInstance().getTracks(biome, getWorldTime(p))) {
+            trackNames.add(track.getName());
+        }
+        return trackNames;
     }
 
     @EventHandler
@@ -152,5 +164,9 @@ public class MusicPlayer implements Listener {
         } else {
             return "night";
         }
+    }
+
+    public Track getMusicPlaying() {
+        return musicPlaying;
     }
 }

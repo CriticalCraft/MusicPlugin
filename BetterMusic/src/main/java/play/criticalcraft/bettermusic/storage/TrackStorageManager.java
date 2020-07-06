@@ -71,9 +71,14 @@ public class TrackStorageManager {
     }
 
     public ArrayList<Track> listBiomeTracks(String biome) {
+        ArrayList<Track> tracks = new ArrayList<>();
+        try {
+         tracks = trackStorage.getPlaylist(Biome.valueOf(biome.toUpperCase()));
+        }catch (Exception e){
 
+        }
 
-        return trackStorage.getPlaylist(Biome.valueOf(biome.toUpperCase()));
+        return tracks;
     }
 
 

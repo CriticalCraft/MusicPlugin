@@ -30,8 +30,12 @@ public class DeleteSong extends SubCommand {
     @Override
     public void perform(Player player, String[] args) {
         if (player.hasPermission("bettermusic.bm.delete")) {
-            TrackStorageManager.getInstance().deleteTrack(player, args[1]);
-        }else{
+            if (args.length >= 2) {
+                TrackStorageManager.getInstance().deleteTrack(player, args[1]);
+            } else {
+                player.sendMessage("Missing arguments");
+            }
+        } else {
             player.sendMessage("You do not have the right permisisons!");
         }
 
@@ -51,6 +55,7 @@ public class DeleteSong extends SubCommand {
 
 
         }
+
 
         return null;
     }
