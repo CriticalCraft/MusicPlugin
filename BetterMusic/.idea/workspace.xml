@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="baff7283-0555-4b25-b692-2d595771c581" name="Default Changelist" comment="Added commands and trackmanager">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_8_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_tree_8_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Listeners/RegionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_destroystokyo_paper_paper_api_1_15_2_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_destroystokyo_paper_paper_api_1_15_2_R0_1_SNAPSHOT.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_15_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_15_SNAPSHOT.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_7_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_analysis_7_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_analysis_8_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_commons_7_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_commons_8_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_tree_7_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterMusic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deps/MCJukebox.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/deps/MCJukebox.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/DeleteSong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/DeleteSong.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Listeners/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Listeners/MusicPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/storage/TrackStorageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/storage/TrackStorageManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT-shaded.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/Commands/subcommands/DeleteSong.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/Commands/subcommands/DeleteSong.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/Listeners/MusicPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/Listeners/MusicPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/storage/TrackStorageManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/storage/TrackStorageManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-BetterMusic-1.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-BetterMusic-1.1-SNAPSHOT.jar" afterDir="false" />
-    </list>
+    <list default="true" id="baff7283-0555-4b25-b692-2d595771c581" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,6 +52,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -140,7 +117,7 @@
       <workItem from="1593026562392" duration="103000" />
       <workItem from="1593892984387" duration="970000" />
       <workItem from="1594061311245" duration="29000" />
-      <workItem from="1594061349029" duration="7693000" />
+      <workItem from="1594061349029" duration="8013000" />
     </task>
     <task id="LOCAL-00001" summary="Added commands and trackmanager">
       <created>1583622130448</created>
@@ -149,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583622130448</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Playlist fix when changing biomes">
+      <created>1594069938052</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594069938052</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,29 +141,34 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added commands and trackmanager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added commands and trackmanager" />
+    <MESSAGE value="Playlist fix when changing biomes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Playlist fix when changing biomes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1082" y="220" key="#com.intellij.ide.util.MemberChooser" timestamp="1594062073291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1082" y="220" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594062073291" />
-    <state width="1877" height="191" key="GridCell.Tab.0.bottom" timestamp="1594069659586">
+    <state x="422" y="88" key="CommitChangelistDialog2" timestamp="1594069937200">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="191" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594069659586" />
-    <state width="1877" height="191" key="GridCell.Tab.0.center" timestamp="1594069659585">
+    <state x="422" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594069937200" />
+    <state width="1877" height="191" key="GridCell.Tab.0.bottom" timestamp="1594069975174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="191" key="GridCell.Tab.0.center/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594069659585" />
-    <state width="1877" height="191" key="GridCell.Tab.0.left" timestamp="1594069659585">
+    <state width="1877" height="191" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594069975174" />
+    <state width="1877" height="191" key="GridCell.Tab.0.center" timestamp="1594069975174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="191" key="GridCell.Tab.0.left/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594069659585" />
-    <state width="1877" height="191" key="GridCell.Tab.0.right" timestamp="1594069659585">
+    <state width="1877" height="191" key="GridCell.Tab.0.center/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594069975174" />
+    <state width="1877" height="191" key="GridCell.Tab.0.left" timestamp="1594069975174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="191" key="GridCell.Tab.0.right/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594069659585" />
+    <state width="1877" height="191" key="GridCell.Tab.0.left/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594069975174" />
+    <state width="1877" height="191" key="GridCell.Tab.0.right" timestamp="1594069975174">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="191" key="GridCell.Tab.0.right/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594069975174" />
     <state x="342" y="180" key="new project wizard" timestamp="1593026663502">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
