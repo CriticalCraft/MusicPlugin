@@ -111,9 +111,9 @@ public class TrackStorage {
         }
     }
 
-    public ArrayList<Track> getPlaylist(Biome biome, String Time) {
+    public ArrayList<Track> getPlaylist(String region, String Time) {
         ArrayList<Track> tracks = new ArrayList<Track>();
-        String sql = "SELECT name, url, duration, playlist FROM tracks WHERE (playlist = '" + biome.name().toLowerCase() + "' AND timeofday = '" + Time + "') OR (playlist = '" + biome.name().toLowerCase() + "' AND timeofday IS NULL);";
+        String sql = "SELECT name, url, duration, playlist FROM tracks WHERE (playlist = '" + region.toLowerCase() + "' AND timeofday = '" + Time + "') OR (playlist = '" + region.toLowerCase() + "' AND timeofday IS NULL);";
         try {
             Connection conn = DriverManager.getConnection("jdbc:sqlite:" + BetterMusic.i.getDataFolder() + "/Music.db");
 
@@ -132,9 +132,9 @@ public class TrackStorage {
         return tracks;
     }
 
-    public ArrayList<Track> getPlaylist(Biome biome) {
+    public ArrayList<Track> getPlaylist(String region) {
         ArrayList<Track> tracks = new ArrayList<Track>();
-        String sql = "SELECT name, url, duration, playlist FROM tracks WHERE playlist = '" + biome.name().toLowerCase() + "'";
+        String sql = "SELECT name, url, duration, playlist FROM tracks WHERE playlist = '" + region.toLowerCase() + "'";
         try {
             Connection conn = DriverManager.getConnection("jdbc:sqlite:" + BetterMusic.i.getDataFolder() + "/Music.db");
 

@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="baff7283-0555-4b25-b692-2d595771c581" name="Default Changelist" comment="" />
+    <list default="true" id="baff7283-0555-4b25-b692-2d595771c581" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/worldedit_bukkit_7_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/deps/worldedit-bukkit-7.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/deps/worldguard-bukkit-7.0.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/listener/RegionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/BetterMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/BetterMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/CheckBiomeSongs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/CheckBiomeSongs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Listeners/JoinListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/listener/JoinListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Listeners/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/listener/MusicPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Listeners/PlayerBiomeTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/listener/PlayerBiomeTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/Listeners/RegionListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/storage/TrackStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/storage/TrackStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/storage/TrackStorageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/play/criticalcraft/bettermusic/storage/TrackStorageManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BetterMusic-1.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/BetterMusic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/BetterMusic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/Commands/subcommands/CheckBiomeSongs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/Commands/subcommands/CheckBiomeSongs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/Listeners/JoinListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/Listeners/MusicPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/Listeners/PlayerBiomeTracker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/play/criticalcraft/bettermusic/Listeners/RegionListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-BetterMusic-1.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-BetterMusic-1.1-SNAPSHOT.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +70,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/deps/MCJukebox.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/deps/worldguard-bukkit-7.0.3.jar!/" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -54,12 +79,13 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.4" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\larsh\Code\Java\MusicPlugin\BetterMusic\src\deps" />
       <recent name="C:\Users\larsh\IdeaProjects\BetterMusic\src\deps" />
     </key>
   </component>
@@ -117,7 +143,9 @@
       <workItem from="1593026562392" duration="103000" />
       <workItem from="1593892984387" duration="970000" />
       <workItem from="1594061311245" duration="29000" />
-      <workItem from="1594061349029" duration="8321000" />
+      <workItem from="1594061349029" duration="8922000" />
+      <workItem from="1594116747936" duration="3955000" />
+      <workItem from="1594131273024" duration="4679000" />
     </task>
     <task id="LOCAL-00001" summary="Added commands and trackmanager">
       <created>1583622130448</created>
@@ -153,22 +181,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="422" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594069937200" />
-    <state width="1877" height="191" key="GridCell.Tab.0.bottom" timestamp="1594069975174">
+    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1594132493713">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="191" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594069975174" />
-    <state width="1877" height="191" key="GridCell.Tab.0.center" timestamp="1594069975174">
+    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594132493713" />
+    <state width="1877" height="191" key="GridCell.Tab.0.bottom" timestamp="1594136008983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="191" key="GridCell.Tab.0.center/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594069975174" />
-    <state width="1877" height="191" key="GridCell.Tab.0.left" timestamp="1594069975174">
+    <state width="1877" height="191" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594136008983" />
+    <state width="1877" height="191" key="GridCell.Tab.0.center" timestamp="1594136008983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="191" key="GridCell.Tab.0.left/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594069975174" />
-    <state width="1877" height="191" key="GridCell.Tab.0.right" timestamp="1594069975174">
+    <state width="1877" height="191" key="GridCell.Tab.0.center/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594136008983" />
+    <state width="1877" height="191" key="GridCell.Tab.0.left" timestamp="1594136008983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="191" key="GridCell.Tab.0.right/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594069975174" />
+    <state width="1877" height="191" key="GridCell.Tab.0.left/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594136008983" />
+    <state width="1877" height="191" key="GridCell.Tab.0.right" timestamp="1594136008983">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="191" key="GridCell.Tab.0.right/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594136008983" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1594132502828">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1080.-473.1080.1920@0.0.1920.1040" timestamp="1594132502828" />
     <state x="342" y="180" key="new project wizard" timestamp="1593026663502">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

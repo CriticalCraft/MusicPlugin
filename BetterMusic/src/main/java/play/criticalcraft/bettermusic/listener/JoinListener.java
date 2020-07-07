@@ -1,4 +1,4 @@
-package play.criticalcraft.bettermusic.Listeners;
+package play.criticalcraft.bettermusic.listener;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

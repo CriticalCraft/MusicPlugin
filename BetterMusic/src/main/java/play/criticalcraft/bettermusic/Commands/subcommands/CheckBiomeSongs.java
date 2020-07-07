@@ -4,7 +4,6 @@ import org.bukkit.block.Biome;
 import org.bukkit.entity.Player;
 import play.criticalcraft.bettermusic.BetterMusic;
 import play.criticalcraft.bettermusic.Commands.SubCommand;
-import play.criticalcraft.bettermusic.Listeners.PlayerBiomeTracker;
 import play.criticalcraft.bettermusic.storage.Track;
 import play.criticalcraft.bettermusic.storage.TrackStorageManager;
 

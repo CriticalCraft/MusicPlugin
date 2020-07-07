@@ -1,12 +1,10 @@
-package play.criticalcraft.bettermusic.Listeners;
+package play.criticalcraft.bettermusic.listener;
 
 
 import net.mcjukebox.plugin.bukkit.api.JukeboxAPI;
 import net.mcjukebox.plugin.bukkit.api.ResourceType;
 import net.mcjukebox.plugin.bukkit.api.models.Media;
 import net.mcjukebox.shared.api.Region;
-import net.mcjukebox.shared.utils.RegionUtils;
-import org.bukkit.block.Biome;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
@@ -32,7 +30,7 @@ public class MusicPlayer implements Listener {
     private Track musicPlaying;
     private long musicStarted;
     private Media media;
-    private Biome biome;
+    private String highestRegion;
 
 
     public MusicPlayer(Player p) {
@@ -90,13 +88,12 @@ public class MusicPlayer implements Listener {
         }
 
 
-
         musicPlaying = track;
         musicStarted = System.currentTimeMillis();
 
 
         if (musicPlaying != null) {
-            System.out.println("Now playing: " + musicPlaying.getName() + " for player: " + p.getDisplayName());
+            System.out.println("Now playing: " + musicPlaying.getName() + " for player: " + this.p.getDisplayName());
 
             media.setURL(musicPlaying.getUrl());
             //System.out.println(media.getFadeDuration());
@@ -108,18 +105,31 @@ public class MusicPlayer implements Listener {
 
 
     private Track getTrack() {
-        //String regio = RegionListener.getRegion(p.getLocation());
+        int highestPriority = -1;
+        this.highestRegion = null;
+        RegionListener regionListener = new RegionListener();
+        Iterator var4 = regionListener.getApplicableRegions(this.p.getLocation()).iterator();
+        while (var4.hasNext()) {
+            Region region = (Region) var4.next();
+            if (region.getPriority() > highestPriority) {
+                highestPriority = region.getPriority();
+                this.highestRegion = region.getId();
+            }
 
 
-        biome = BetterMusic.i.playerBiomeTracker.getBiome(p);
+        }
 
-        return getRandomTrack(biome);
+        if (highestRegion == null) {
+            highestRegion = BetterMusic.i.playerBiomeTracker.getBiome(this.p).toString();
+        }
+
+        return getRandomTrack(this.highestRegion);
     }
 
 
-    private Track getRandomTrack(Biome biome) {
+    private Track getRandomTrack(String region) {
 
-        ArrayList<Track> tracks = TrackStorageManager.getInstance().getTracks(biome, getWorldTime(p));
+        ArrayList<Track> tracks = TrackStorageManager.getInstance().getTracks(highestRegion, getWorldTime(p));
 
 
         if (tracks.size() == 0) {
@@ -136,7 +146,7 @@ public class MusicPlayer implements Listener {
 
     private ArrayList<String> getTracks() {
         ArrayList<String> trackNames = new ArrayList<>();
-        for (Track track : TrackStorageManager.getInstance().getTracks(biome, getWorldTime(p))) {
+        for (Track track : TrackStorageManager.getInstance().getTracks(highestRegion, getWorldTime(p))) {
             trackNames.add(track.getName());
         }
         return trackNames;

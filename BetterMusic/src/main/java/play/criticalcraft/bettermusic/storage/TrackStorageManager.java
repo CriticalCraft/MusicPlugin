@@ -64,16 +64,16 @@ public class TrackStorageManager {
         player.sendMessage("Deleted track: " + name);
     }
 
-    public ArrayList<Track> getTracks(Biome biome, String time) {
+    public ArrayList<Track> getTracks(String region, String time) {
 
 
-        return trackStorage.getPlaylist(biome, time);
+        return trackStorage.getPlaylist(region, time);
     }
 
-    public ArrayList<Track> listBiomeTracks(String biome) {
+    public ArrayList<Track> listBiomeTracks(String region) {
         ArrayList<Track> tracks = new ArrayList<>();
         try {
-         tracks = trackStorage.getPlaylist(Biome.valueOf(biome.toUpperCase()));
+         tracks = trackStorage.getPlaylist(region);
         }catch (Exception e){
 
         }
