@@ -18,7 +18,11 @@ public final class BetterMusic extends JavaPlugin {
 
     public static BetterMusic i;
     public PlayerBiomeTracker playerBiomeTracker;
+
+
+
     private RegionListener regionListener;
+
 
     @Override
     public void onEnable() {
@@ -39,15 +43,20 @@ public final class BetterMusic extends JavaPlugin {
         }
         this.getServer().getPluginManager().registerEvents(new JoinListener(), this);
 
-        this.regionListener = new RegionListener();
-        Bukkit.getPluginManager().registerEvents(this.regionListener,this);
-
+        if (Bukkit.getPluginManager().getPlugin("WorldGuard") != null) {
+            this.regionListener = new RegionListener();
+        }
         this.playerBiomeTracker = new PlayerBiomeTracker();
-        final BukkitTask timeTask = new TimeTask(this).runTaskTimer(this, 5L, 20L);
+        final BukkitTask timeTask = new TimeTask(this).runTaskTimer(this, 20L, 20L);
         for (final Player p : Bukkit.getOnlinePlayers()) {
+            System.out.println(p.getDisplayName());
             new MusicPlayer(p);
         }
+        this.getLogger().info(this.getName() + " has been loaded!");
 
+    }
 
+    public RegionListener getRegionListener() {
+        return regionListener;
     }
 }

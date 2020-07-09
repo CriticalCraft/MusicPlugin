@@ -19,13 +19,9 @@ import com.sk89q.worldguard.protection.regions.ProtectedRegion;
 
 import net.mcjukebox.shared.api.Region;
 import org.bukkit.Location;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
+
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
-import org.bukkit.event.player.PlayerTeleportEvent;
+
 import org.bukkit.plugin.Plugin;
 import org.bukkit.util.Vector;
 import play.criticalcraft.bettermusic.BetterMusic;
@@ -38,14 +34,6 @@ public class RegionListener implements Listener {
     }
 
 
-    @EventHandler
-    public void onMove(PlayerMoveEvent e) {
-        Player player = e.getPlayer();
-
-        getApplicableRegions(player.getLocation());
-
-
-    }
 
     public List<Region> getApplicableRegions(Location location) {
         ArrayList regionList = new ArrayList();

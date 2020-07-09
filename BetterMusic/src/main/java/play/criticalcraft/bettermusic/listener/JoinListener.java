@@ -8,9 +8,7 @@ public class JoinListener implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
-        System.out.println("----------------");
-        System.out.println("New Player "+e.getPlayer());
-        System.out.println("----------------");
+
         new MusicPlayer(e.getPlayer());
     }
 

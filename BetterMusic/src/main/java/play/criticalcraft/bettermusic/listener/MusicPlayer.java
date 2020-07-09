@@ -4,12 +4,15 @@ package play.criticalcraft.bettermusic.listener;
 import net.mcjukebox.plugin.bukkit.api.JukeboxAPI;
 import net.mcjukebox.plugin.bukkit.api.ResourceType;
 import net.mcjukebox.plugin.bukkit.api.models.Media;
+import net.mcjukebox.plugin.bukkit.events.ClientConnectEvent;
 import net.mcjukebox.shared.api.Region;
+
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import play.criticalcraft.bettermusic.BetterMusic;
 import play.criticalcraft.bettermusic.events.TimeEvent;
@@ -42,7 +45,7 @@ public class MusicPlayer implements Listener {
             this.media = new Media(ResourceType.MUSIC, getTrack().getUrl());
 
             media.setLooping(false);
-            media.setFadeDuration(2);
+            media.setFadeDuration(1);
             media.setVolume(30);
         }
         getServer().getPluginManager().registerEvents(this, BetterMusic.i);
@@ -50,9 +53,16 @@ public class MusicPlayer implements Listener {
 
     }
 
+    @EventHandler
+    public void clientConnect(ClientConnectEvent e){
+        setMusicPlaying(getTrack());
+    }
+
+
+
 
     @EventHandler
-    public void check(TimeEvent e) {
+    public void timer(TimeEvent e) {
 
         if (musicPlaying == null) {
             setMusicPlaying(getTrack());
@@ -81,16 +91,8 @@ public class MusicPlayer implements Listener {
 
     private void setMusicPlaying(Track track) {
 
-        if (track == null) {
-            System.out.println("Now playing: Nothing");
-
-
-        }
-
-
         musicPlaying = track;
         musicStarted = System.currentTimeMillis();
-
 
         if (musicPlaying != null) {
             System.out.println("Now playing: " + musicPlaying.getName() + " for player: " + this.p.getDisplayName());
@@ -99,7 +101,7 @@ public class MusicPlayer implements Listener {
             //System.out.println(media.getFadeDuration());
             JukeboxAPI.play(p, media);
         } else {
-            JukeboxAPI.stopMusic(p);
+            JukeboxAPI.stopMusic(p,"default",2);
         }
     }
 
@@ -107,7 +109,7 @@ public class MusicPlayer implements Listener {
     private Track getTrack() {
         int highestPriority = -1;
         this.highestRegion = null;
-        RegionListener regionListener = new RegionListener();
+        RegionListener regionListener = BetterMusic.i.getRegionListener();
         Iterator var4 = regionListener.getApplicableRegions(this.p.getLocation()).iterator();
         while (var4.hasNext()) {
             Region region = (Region) var4.next();
