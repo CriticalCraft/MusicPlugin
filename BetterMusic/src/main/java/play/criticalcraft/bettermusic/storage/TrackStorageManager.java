@@ -1,5 +1,6 @@
 package play.criticalcraft.bettermusic.storage;
 
+import org.bukkit.ChatColor;
 import org.bukkit.block.Biome;
 import org.bukkit.entity.Player;
 
@@ -25,9 +26,11 @@ public class TrackStorageManager {
         return instance;
     }
 
-    //insertTrack (String name,  String url,  int duration,  String playlist,  String day)
+    //                      1           2               3           4               5
+    //insertTrack (String name, String playlist, int duration,  String url, String day)
     public void insertTrack(Player player, String[] args) {
         int min, sec;
+        int playlistID = 0, trackID = 0;
         try {
             min = Integer.parseInt(args[3]);
             sec = Integer.parseInt(args[4]);
@@ -38,43 +41,73 @@ public class TrackStorageManager {
 
         if (args.length == 6) {
 
-            System.out.println(args[5]);
-            if (args[5].equals("day") || args[5].equals("night")) {
 
-                player.sendMessage("No url given");
-                return;
+            if (!args[2].equals(trackStorage.getPlaylistName(args[2]))) {
 
-            } else {
-                trackStorage.insertTrack(args[1], args[5], min * 60 + sec, args[2]);
-                player.sendMessage("Added " + args[1] + " to the playlist: " + args[2]);
+                insertPlaylist(args[2]);
+                player.sendMessage(ChatColor.GREEN + "New playlist made");
             }
-        } else if (args.length == 7) {
-            trackStorage.insertTrack(args[1], args[6], min * 60 + sec, args[2], args[5]);
+
+
+            if (!args[1].equals(trackStorage.getTrack(args[1], args[5]).getName()) && !args[5].equals(trackStorage.getTrack(args[1], args[5]).getUrl())) {
+
+                trackStorage.insertTrack(args[1], min * 60 + sec, args[5]);
+                player.sendMessage(ChatColor.GREEN + "Added Song to database");
+            } else {
+                player.sendMessage(ChatColor.YELLOW + "Song was already in database");
+            }
+
+
+            playlistID = trackStorage.getPlaylistID(args[2]);
+            trackID = trackStorage.getTrackID(args[1], args[5]);
+
+
+            trackStorage.insertPlaylistTrack(trackID, playlistID);
+
             player.sendMessage("Added " + args[1] + " to the playlist: " + args[2]);
+
+
+        } else if (args.length == 7) {
+            if (trackStorage.insertTrack(args[1], min * 60 + sec, args[5], args[7])) {
+                player.sendMessage("Added " + args[1] + " to the playlist: " + args[2]);
+            } else {
+                player.sendMessage("Song already in database");
+            }
+
         } else {
             player.sendMessage("Missing arguments");
         }
 
     }
 
-    public void deleteTrack(Player player, String name) {
+    private void insertPlaylist(String name) {
+        trackStorage.insertPlaylist(name);
+    }
+
+    public void deleteTrack(Player player, String name, String region) {
+
+        trackStorage.deleteTrackFromPlaylist(name, region);
+        player.sendMessage("Deleted song: " + name);
+    }
+
+    public void deletePlaylist(Player player, String name) {
 
 
-        trackStorage.deleteTrack(name);
-        player.sendMessage("Deleted track: " + name);
+        trackStorage.deletePlaylist(name);
+        player.sendMessage("Deleted playlist: " + name);
     }
 
     public ArrayList<Track> getTracks(String region, String time) {
 
 
-        return trackStorage.getPlaylist(region, time);
+        return trackStorage.getTrackPlaylist(region.toLowerCase(), time);
     }
 
     public ArrayList<Track> listBiomeTracks(String region) {
         ArrayList<Track> tracks = new ArrayList<>();
         try {
-         tracks = trackStorage.getPlaylist(region);
-        }catch (Exception e){
+            tracks = trackStorage.getTrackPlaylist(region.toLowerCase());
+        } catch (Exception e) {
 
         }
 

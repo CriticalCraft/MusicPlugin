@@ -7,7 +7,8 @@ package play.criticalcraft.bettermusic.listener;
 
 import java.util.*;
 
-import com.sk89q.worldedit.math.BlockVector3;
+import com.sk89q.worldedit.math
+        .BlockVector3;
 
 import com.sk89q.worldedit.world.World;
 import com.sk89q.worldguard.WorldGuard;

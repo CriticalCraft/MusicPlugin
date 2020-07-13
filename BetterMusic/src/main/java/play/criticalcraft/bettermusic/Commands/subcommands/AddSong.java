@@ -30,7 +30,7 @@ public class AddSong extends SubCommand {
 
     @Override
     public String getSyntax() {
-        return "/bm add <name> <playlist/biome> <min> <sec> [time: day/night] <url> ";
+        return "/bm add <song name> <playlist> <min> <sec> <url> [time: day/night] ";
     }
 
     @Override
@@ -38,10 +38,10 @@ public class AddSong extends SubCommand {
         if (player.hasPermission("bettermusic.bm.add")) {
             if (args.length >= 6) {
                 TrackStorageManager.getInstance().insertTrack(player, args);
-            }else {
+            } else {
                 player.sendMessage("Missing arguments");
             }
-        }else{
+        } else {
             player.sendMessage("You do not have the right permisisons!");
         }
     }
@@ -53,7 +53,7 @@ public class AddSong extends SubCommand {
 
             List<String> thing = new ArrayList<>();
             if (args[1].isEmpty()) {
-                thing.add("<name>");
+                thing.add("<song name>");
             }
             return thing;
 
@@ -64,8 +64,11 @@ public class AddSong extends SubCommand {
 
 
             for (Biome biome : Biome.values()) {
+                if (args[2].equals(biome.toString().toLowerCase())){
+                    return null;
+                }
 
-                if (Pattern.matches("\\b(\\w*" + args[2] + "\\w*)\\b", biome.toString().toLowerCase())) {
+                if (Pattern.matches("\\b(\\w*?" + args[2] + "\\w*?)\\b", biome.toString().toLowerCase())) {
 
                     biomesNames.add(biome.toString().toLowerCase());
                 }
@@ -98,18 +101,14 @@ public class AddSong extends SubCommand {
         if (args.length == 6) {
             List<String> thing = new ArrayList<>();
 
-
-            thing.add("day");
-            thing.add("night");
             thing.add("<url>");
             return thing;
 
         } else if (args.length == 7) {
             List<String> thing = new ArrayList<>();
 
-            if (args[6].isEmpty()) {
-                thing.add("<url>");
-            }
+            thing.add("day");
+            thing.add("night");
             return thing;
         }
         return null;

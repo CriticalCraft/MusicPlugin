@@ -33,6 +33,9 @@ public class MusicPlayer implements Listener {
     private Track musicPlaying;
     private long musicStarted;
     private Media media;
+
+
+
     private String highestRegion;
 
 
@@ -54,11 +57,9 @@ public class MusicPlayer implements Listener {
     }
 
     @EventHandler
-    public void clientConnect(ClientConnectEvent e){
+    public void clientConnect(ClientConnectEvent e) {
         setMusicPlaying(getTrack());
     }
-
-
 
 
     @EventHandler
@@ -77,11 +78,8 @@ public class MusicPlayer implements Listener {
         Track next = getTrack();
 
 
-        if (next == null || !musicPlaying.getBiome().equals(next.getBiome())) {
-            if (getTracks().contains(musicPlaying.getName())) {
+        if (next == null || !getTracks().contains(musicPlaying.getName())) {
 
-                return;
-            }
             setMusicPlaying(getTrack());
         }
 
@@ -96,12 +94,15 @@ public class MusicPlayer implements Listener {
 
         if (musicPlaying != null) {
             System.out.println("Now playing: " + musicPlaying.getName() + " for player: " + this.p.getDisplayName());
-
-            media.setURL(musicPlaying.getUrl());
-            //System.out.println(media.getFadeDuration());
-            JukeboxAPI.play(p, media);
+            try {
+                media.setURL(musicPlaying.getUrl());
+                //System.out.println(media.getFadeDuration());
+                JukeboxAPI.play(p, media);
+            }catch (NullPointerException e){
+                System.out.println(e.getMessage());
+            }
         } else {
-            JukeboxAPI.stopMusic(p,"default",2);
+            JukeboxAPI.stopMusic(p, "default", 2);
         }
     }
 
@@ -115,14 +116,16 @@ public class MusicPlayer implements Listener {
             Region region = (Region) var4.next();
             if (region.getPriority() > highestPriority) {
                 highestPriority = region.getPriority();
-                this.highestRegion = region.getId();
+
+                setHighestRegion(region.getId());
             }
 
 
         }
 
         if (highestRegion == null) {
-            highestRegion = BetterMusic.i.playerBiomeTracker.getBiome(this.p).toString();
+            setHighestRegion(BetterMusic.i.playerBiomeTracker.getBiome(this.p).toString());
+
         }
 
         return getRandomTrack(this.highestRegion);
@@ -180,5 +183,9 @@ public class MusicPlayer implements Listener {
 
     public Track getMusicPlaying() {
         return musicPlaying;
+    }
+
+    public void setHighestRegion(String highestRegion) {
+        this.highestRegion = highestRegion;
     }
 }

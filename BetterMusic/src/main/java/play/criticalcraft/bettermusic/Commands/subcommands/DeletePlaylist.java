@@ -1,6 +1,5 @@
 package play.criticalcraft.bettermusic.Commands.subcommands;
 
-
 import org.bukkit.entity.Player;
 import play.criticalcraft.bettermusic.Commands.SubCommand;
 import play.criticalcraft.bettermusic.storage.TrackStorageManager;
@@ -8,30 +7,27 @@ import play.criticalcraft.bettermusic.storage.TrackStorageManager;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class DeleteSong extends SubCommand {
-
-
+public class DeletePlaylist extends SubCommand {
     @Override
     public String getName() {
-        return "delete";
+        return "deletepl";
     }
 
     @Override
     public String getDescription() {
-        return "deletes a song from a playlist ";
+        return "deletes a playlist ";
     }
 
     @Override
     public String getSyntax() {
-        return "/bm delete <name> <playlist> ";
+        return "/bm deletepl <name> ";
     }
 
     @Override
     public void perform(Player player, String[] args) {
         if (player.hasPermission("bettermusic.bm.delete")) {
             if (args.length >= 2) {
-                TrackStorageManager.getInstance().deleteTrack(player, args[1], args[2]);
+                TrackStorageManager.getInstance().deletePlaylist(player, args[1]);
             } else {
                 player.sendMessage("Missing arguments");
             }

@@ -5,6 +5,7 @@ C:\Users\larsh\Code\Java\MusicPlugin\BetterMusic\src\main\java\play\criticalcraf
 C:\Users\larsh\Code\Java\MusicPlugin\BetterMusic\src\main\java\play\criticalcraft\bettermusic\Commands\SubCommand.java
 C:\Users\larsh\Code\Java\MusicPlugin\BetterMusic\src\main\java\play\criticalcraft\bettermusic\Commands\CommanManager.java
 C:\Users\larsh\Code\Java\MusicPlugin\BetterMusic\src\main\java\play\criticalcraft\bettermusic\Commands\subcommands\DeleteSong.java
+C:\Users\larsh\Code\Java\MusicPlugin\BetterMusic\src\main\java\play\criticalcraft\bettermusic\Commands\subcommands\DeletePlaylist.java
 C:\Users\larsh\Code\Java\MusicPlugin\BetterMusic\src\main\java\play\criticalcraft\bettermusic\storage\Track.java
 C:\Users\larsh\Code\Java\MusicPlugin\BetterMusic\src\main\java\play\criticalcraft\bettermusic\listener\MusicPlayer.java
 C:\Users\larsh\Code\Java\MusicPlugin\BetterMusic\src\main\java\play\criticalcraft\bettermusic\Commands\subcommands\CheckBiomeSongs.java
