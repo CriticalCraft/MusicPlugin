@@ -27,7 +27,7 @@ public class DeletePlaylist extends SubCommand {
     public void perform(Player player, String[] args) {
         if (player.hasPermission("bettermusic.bm.delete")) {
             if (args.length >= 2) {
-                TrackStorageManager.getInstance().deletePlaylist(player, args[1]);
+                //TrackStorageManager.getInstance().deletePlaylist(player, args[1]);
             } else {
                 player.sendMessage("Missing arguments");
             }

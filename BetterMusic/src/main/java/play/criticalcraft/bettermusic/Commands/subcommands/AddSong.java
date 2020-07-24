@@ -98,9 +98,6 @@ public class AddSong extends SubCommand {
         if (args.length == 6) {
             List<String> thing = new ArrayList<>();
 
-
-            thing.add("day");
-            thing.add("night");
             thing.add("<url>");
             return thing;
 
@@ -108,7 +105,7 @@ public class AddSong extends SubCommand {
             List<String> thing = new ArrayList<>();
 
             if (args[6].isEmpty()) {
-                thing.add("<url>");
+                thing.add("time: [day/night]");
             }
             return thing;
         }

@@ -77,7 +77,7 @@ public class MusicPlayer implements Listener {
         Track next = getTrack();
 
 
-        if (next == null || !musicPlaying.getBiome().equals(next.getBiome())) {
+        if (next == null || !musicPlaying.getRegion().equals(next.getRegion())) {
             if (getTracks().contains(musicPlaying.getName())) {
 
                 return;

@@ -80,9 +80,9 @@ public class TrackStorage {
         try (Connection conn = this.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, name);
-            pstmt.setString(2, url);
+            pstmt.setString(2, playlist);
             pstmt.setInt(3, duration);
-            pstmt.setString(4, playlist);
+            pstmt.setString(4, url);
             pstmt.setString(5, null);
 
             pstmt.executeUpdate();
@@ -93,14 +93,15 @@ public class TrackStorage {
         }
     }
 
-    public ArrayList<Track> getPlaylist(String region, String Time) {
+    public ArrayList<Track> getPlaylist(String region, String time) {
+
         ArrayList<Track> tracks = new ArrayList<Track>();
-        String sql = "SELECT name, playlist, duration, url, playlist " +
+        String sql = "SELECT name, playlist, duration, url " +
                 "FROM tracks WHERE (playlist = ? AND timeofday = ?) OR (playlist = ? AND timeofday IS NULL);";
         try (Connection conn = this.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, region.toLowerCase());
-            pstmt.setString(2, Time);
+            pstmt.setString(2, time);
             pstmt.setString(3, region.toLowerCase());
 
             ResultSet rs = pstmt.executeQuery();
@@ -118,7 +119,7 @@ public class TrackStorage {
 
     public ArrayList<Track> getPlaylist(String region) {
         ArrayList<Track> tracks = new ArrayList<Track>();
-        String sql = "SELECT name, playlist, duration, url, playlist " +
+        String sql = "SELECT name, playlist, duration, url " +
                 "FROM tracks WHERE playlist = ?";
         try (Connection conn = this.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
 

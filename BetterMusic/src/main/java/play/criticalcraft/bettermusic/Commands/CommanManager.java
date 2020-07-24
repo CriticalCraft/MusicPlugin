@@ -20,7 +20,7 @@ public class CommanManager implements TabExecutor {
     public CommanManager() {
         subcommands.add(new AddSong());
         subcommands.add(new DeleteSong());
-        subcommands.add(new DeletePlaylist());
+        //subcommands.add(new DeletePlaylist());
         subcommands.add(new CheckBiomeSongs());
     }
 

@@ -31,7 +31,7 @@ public class DeleteSong extends SubCommand {
     public void perform(Player player, String[] args) {
         if (player.hasPermission("bettermusic.bm.delete")) {
             if (args.length >= 2) {
-                TrackStorageManager.getInstance().deleteTrack(player, args[1], args[2]);
+                TrackStorageManager.getInstance().deleteTrack(player, args[1]);
             } else {
                 player.sendMessage("Missing arguments");
             }
