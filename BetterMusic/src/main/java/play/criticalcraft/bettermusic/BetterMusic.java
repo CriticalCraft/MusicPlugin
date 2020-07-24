@@ -47,7 +47,7 @@ public final class BetterMusic extends JavaPlugin {
             this.regionListener = new RegionListener();
         }
         this.playerBiomeTracker = new PlayerBiomeTracker();
-        final BukkitTask timeTask = new TimeTask(this).runTaskTimer(this, 20L, 20L);
+        final BukkitTask timeTask = new TimeTask(this).runTaskTimer(this, 200L, 20L);
         for (final Player p : Bukkit.getOnlinePlayers()) {
             System.out.println(p.getDisplayName());
             new MusicPlayer(p);

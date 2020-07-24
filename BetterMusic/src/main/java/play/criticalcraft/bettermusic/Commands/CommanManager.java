@@ -7,6 +7,7 @@ import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
 import play.criticalcraft.bettermusic.Commands.subcommands.AddSong;
 import play.criticalcraft.bettermusic.Commands.subcommands.CheckBiomeSongs;
+import play.criticalcraft.bettermusic.Commands.subcommands.DeletePlaylist;
 import play.criticalcraft.bettermusic.Commands.subcommands.DeleteSong;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class CommanManager implements TabExecutor {
     public CommanManager() {
         subcommands.add(new AddSong());
         subcommands.add(new DeleteSong());
+        subcommands.add(new DeletePlaylist());
         subcommands.add(new CheckBiomeSongs());
     }
 
@@ -58,7 +60,7 @@ public class CommanManager implements TabExecutor {
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
 
-        if (args.length == 1){ //prank <subcommand> <args>
+        if (args.length == 1){ //bm <subcommand> <args>
             ArrayList<String> subcommandsArguments = new ArrayList<>();
 
             for (int i = 0; i < getSubcommands().size(); i++){
