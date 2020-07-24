@@ -82,7 +82,7 @@ public class MusicPlayer implements Listener {
 
                 return;
             }
-            setMusicPlaying(getTrack());
+            setMusicPlaying(next);
         }
 
 
@@ -96,10 +96,12 @@ public class MusicPlayer implements Listener {
 
         if (musicPlaying != null) {
             System.out.println("Now playing: " + musicPlaying.getName() + " for player: " + this.p.getDisplayName());
-
-            media.setURL(musicPlaying.getUrl());
+            Media testMedia = new Media(ResourceType.MUSIC,musicPlaying.getUrl());
+            testMedia.setFadeDuration(1);
+            testMedia.setLooping(false);
+            //media.setURL(musicPlaying.getUrl());
             //System.out.println(media.getFadeDuration());
-            JukeboxAPI.play(p, media);
+            JukeboxAPI.play(p, testMedia);
         } else {
             JukeboxAPI.stopMusic(p,"default",2);
         }

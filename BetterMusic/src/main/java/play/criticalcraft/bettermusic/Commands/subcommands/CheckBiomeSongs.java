@@ -36,14 +36,14 @@ public class CheckBiomeSongs extends SubCommand {
 
         if (args.length == 1) {
             Biome b = BetterMusic.i.playerBiomeTracker.getBiome(player);
-            ArrayList<Track> tracks = TrackStorageManager.getInstance().listBiomeTracks(b.name().toLowerCase());
+            ArrayList<Track> tracks = TrackStorageManager.getInstance().getTracks(b.name().toLowerCase());
             for (Track t : tracks) {
                 player.sendMessage(t.getName());
             }
 
         } else {
 
-            ArrayList<Track> tracks = TrackStorageManager.getInstance().listBiomeTracks(args[1]);
+            ArrayList<Track> tracks = TrackStorageManager.getInstance().getTracks(args[1]);
             for (Track t : tracks) {
                 player.sendMessage(t.getName());
             }

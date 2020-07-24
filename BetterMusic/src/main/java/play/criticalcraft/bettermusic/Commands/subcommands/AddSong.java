@@ -30,7 +30,7 @@ public class AddSong extends SubCommand {
 
     @Override
     public String getSyntax() {
-        return "/bm add <name> <playlist/biome> <min> <sec> [time: day/night] <url> ";
+        return "/bm add <name> <playlist/biome> <min> <sec>  <url> [time: day/night] ";
     }
 
     @Override

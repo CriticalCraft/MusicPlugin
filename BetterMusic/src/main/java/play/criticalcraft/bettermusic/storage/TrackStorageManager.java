@@ -39,17 +39,12 @@ public class TrackStorageManager {
         if (args.length == 6) {
 
             System.out.println(args[5]);
-            if (args[5].equals("day") || args[5].equals("night")) {
 
-                player.sendMessage("No url given");
-                return;
+            trackStorage.insertTrack(args[1], args[2], min * 60 + sec, args[5]);
+            player.sendMessage("Added " + args[1] + " to the playlist: " + args[2]);
 
-            } else {
-                trackStorage.insertTrack(args[1], args[5], min * 60 + sec, args[2]);
-                player.sendMessage("Added " + args[1] + " to the playlist: " + args[2]);
-            }
         } else if (args.length == 7) {
-            trackStorage.insertTrack(args[1], args[6], min * 60 + sec, args[2], args[5]);
+            trackStorage.insertTrack(args[1], args[2], min * 60 + sec, args[5], args[6]);
             player.sendMessage("Added " + args[1] + " to the playlist: " + args[2]);
         } else {
             player.sendMessage("Missing arguments");
@@ -70,15 +65,10 @@ public class TrackStorageManager {
         return trackStorage.getPlaylist(region, time);
     }
 
-    public ArrayList<Track> listBiomeTracks(String region) {
-        ArrayList<Track> tracks = new ArrayList<>();
-        try {
-         tracks = trackStorage.getPlaylist(region);
-        }catch (Exception e){
+    public ArrayList<Track> getTracks(String region) {
 
-        }
+        return  trackStorage.getPlaylist(region);
 
-        return tracks;
     }
 
 
