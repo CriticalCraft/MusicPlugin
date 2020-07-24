@@ -43,157 +43,83 @@ public class TrackStorage {
     }
 
     public static void createTable() {
-        String track = "CREATE TABLE track (" +
-                "track_id INTEGER NOT NULL," +
-                "name TEXT NOT NULL ," +
-                "duration INTEGER NOT NULL," +
-                "url TEXT NOT NULL," +
-                "timeOfDay TEXT," +
-                "PRIMARY KEY(track_id)" +
-                ");";
-
-        String playlist = "CREATE TABLE playlist (" +
-                "playlist_id INTEGER NOT NULL," +
-                "name TEXT NOT NULL ," +
-                "PRIMARY KEY(playlist_id)" +
-                ");";
-
-        String playlisttrack = "CREATE TABLE playlisttrack (" +
-                "track_id INTEGER NOT NULL, " +
-                "playlist_id INTEGER NOT NULL, " +
-                "FOREIGN KEY(playlist_id) REFERENCES playlist(playlist_id), " +
-                "FOREIGN KEY(track_id) REFERENCES track(track_id)" +
-                ");";
-
-        String trackIndexUrl = "CREATE UNIQUE INDEX trackurl_idx ON track (url);";
-        String trackIndexName = "CREATE UNIQUE INDEX trackname_idx ON track (name);";
-        String playlistIndex = "CREATE UNIQUE INDEX playlist_idx ON playlist (name);";
-
-
+        String tracks = "CREATE TABLE IF NOT EXISTS tracks (tracks_id INTEGER PRIMARY KEY , name TEXT, playlist TEXT NOT NULL, duration INT NOT NULL, url TEXT NOT NULL,   timeofday TEXT    )";
         try {
             Connection conn = DriverManager.getConnection("jdbc:sqlite:" + BetterMusic.i.getDataFolder() + "/Music.db");
 
             Statement stmt = conn.createStatement();
+            stmt.execute(tracks);
 
-            stmt.execute(track);
-            stmt.execute(playlist);
-            stmt.execute(playlisttrack);
-            stmt.execute(trackIndexUrl);
-            stmt.execute(trackIndexName);
-            stmt.execute(playlistIndex);
 
-            conn.close();
         } catch (Exception e) {
-
             System.out.println(e.getMessage());
         }
     }
 
 
-    public boolean insertTrack(String name, int duration, String day, String url) {
-        String sql = "INSERT INTO track(name, duration, url, timeOfday) VALUES(?,?,?,?)";
+    public void insertTrack(String name, String playlist, int duration, String url, String day) {
+        String sql = "INSERT INTO tracks(name, playlist, duration, url, timeofday) VALUES(?,?,?,?,?)";
         try (Connection conn = this.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, name);
-            pstmt.setInt(2, duration);
-            pstmt.setString(3, url);
-            pstmt.setString(4, day);
-            pstmt.executeUpdate();
-
-        } catch (SQLException e) {
-            return false;
-        }
-        return true;
-    }
-
-
-    public boolean insertTrack(String name, int duration, String url) {
-        String sql = "INSERT INTO track(name, duration, url, timeOfDay) VALUES(?,?,?,?)";
-        try (Connection conn = this.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setString(1, name);
-            pstmt.setInt(2, duration);
-            pstmt.setString(3, url);
-            pstmt.setString(4, null);
-
-
+            pstmt.setString(2, playlist);
+            pstmt.setInt(3, duration);
+            pstmt.setString(4, url);
+            pstmt.setString(5, day);
             pstmt.executeUpdate();
 
 
         } catch (SQLException e) {
-            return false;
-        }
-        return true;
-    }
-
-    public void insertPlaylist(String name) {
-        String sql = "INSERT OR REPLACE INTO playlist (name) VALUES(?) ";
-        try (Connection conn = this.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setString(1, name);
-
-            pstmt.executeUpdate();
-
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-
-        }
-
-    }
-
-    public void insertPlaylistTrack(int track_id, int playlist_id) {
-        String sql = "INSERT OR REPLACE INTO playlisttrack(track_id, playlist_id) VALUES(?,?)";
-        try (Connection conn = this.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setInt(1, track_id);
-            pstmt.setInt(2, playlist_id);
-
-
-            pstmt.executeUpdate();
-
-
-        } catch (SQLException e) {
-
             System.out.println(e.getMessage());
         }
     }
 
 
-    public ArrayList<Track> getTrackPlaylist(String region, String time) {
+    public void insertTrack(String name, String playlist, int duration, String url) {
+        String sql = "INSERT INTO tracks(name, playlist, duration, url, timeofday) VALUES(?,?,?,?,?)";
+        try (Connection conn = this.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, name);
+            pstmt.setString(2, url);
+            pstmt.setInt(3, duration);
+            pstmt.setString(4, playlist);
+            pstmt.setString(5, null);
+
+            pstmt.executeUpdate();
+
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public ArrayList<Track> getPlaylist(String region, String Time) {
         ArrayList<Track> tracks = new ArrayList<Track>();
-        String sql = "SELECT track.name,track.url, track.duration " +
-                "FROM track " +
-                "INNER JOIN playlisttrack pt USING(track_id) " +
-                "INNER JOIN playlist p USING(playlist_id) " +
-                "WHERE (p.name = ? AND track.timeofday = ?) OR (p.name = ? AND track.timeofday IS NULL);";
+        String sql = "SELECT name, playlist, duration, url, playlist " +
+                "FROM tracks WHERE (playlist = ? AND timeofday = ?) OR (playlist = ? AND timeofday IS NULL);";
         try (Connection conn = this.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            pstmt.setString(1, region);
-            pstmt.setString(2, time);
-            pstmt.setString(3, region);
+            pstmt.setString(1, region.toLowerCase());
+            pstmt.setString(2, Time);
+            pstmt.setString(3, region.toLowerCase());
 
             ResultSet rs = pstmt.executeQuery();
 
             while (rs.next()) {
-
-                tracks.add(new Track(rs.getString("name"), rs.getString("url"), rs.getInt("duration")));
+                tracks.add(new Track(rs.getString("name"), rs.getString("url"), rs.getInt("duration"), rs.getString("playlist")));
             }
 
 
         } catch (SQLException e) {
-
             System.out.println(e.getMessage());
         }
         return tracks;
     }
 
-    public ArrayList<Track> getTrackPlaylist(String region) {
+    public ArrayList<Track> getPlaylist(String region) {
         ArrayList<Track> tracks = new ArrayList<Track>();
-        String sql = "SELECT track.name, track.url, track.duration " +
-                "FROM track " +
-                "INNER JOIN playlisttrack pt USING(track_id) " +
-                "INNER JOIN playlist p USING(playlist_id) " +
-                "WHERE p.name = ?";
+        String sql = "SELECT name, playlist, duration, url, playlist " +
+                "FROM tracks WHERE playlist = ?";
         try (Connection conn = this.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, region);
@@ -201,164 +127,29 @@ public class TrackStorage {
             ResultSet rs = pstmt.executeQuery();
 
             while (rs.next()) {
-
-                tracks.add(new Track(rs.getString("name"), rs.getString("url"), rs.getInt("duration")));
+                tracks.add(new Track(rs.getString("name"), rs.getString("url"), rs.getInt("duration"), rs.getString("playlist")));
             }
 
-            conn.close();
-        } catch (SQLException e) {
 
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return tracks;
     }
-
-    public Track getTrack(String name, String url) {
-        Track _var = null;
-        String sql = "SELECT track_id, name, duration, url " +
-                "FROM track " +
-                "WHERE track.name = ? OR track.url = ?";
-        try (Connection conn = this.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setString(1, name);
-            pstmt.setString(2, url);
-
-            ResultSet rs = pstmt.executeQuery();
-
-            _var = new Track( rs.getString("name"),rs.getString("url"),rs.getInt("duration"));
-
-
-
-        } catch (SQLException e) {
-
-            System.out.println(e.getMessage());
-        }
-
-        return _var;
-
-    }
-
-    public int getTrackID(String name, String url) {
-        int _var = 0;
-        String sql = "SELECT track_id, name, duration, url " +
-                "FROM track " +
-                "WHERE track.name = ? OR track.url = ?";
-        try (Connection conn = this.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setString(1, name);
-            pstmt.setString(2, url);
-
-            ResultSet rs = pstmt.executeQuery();
-
-
-            _var = rs.getInt("track_id");
-            conn.close();
-
-        } catch (SQLException e) {
-
-            System.out.println(e.getMessage());
-        }
-        return _var;
-
-    }
-
-    public String getPlaylistName(String name) {
-        String _var = null;
-
-        String sql = "SELECT  name " +
-                "FROM playlist " +
-                "WHERE name = ?";
-        try (Connection conn = this.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setString(1, name);
-
-            ResultSet rs = pstmt.executeQuery();
-
-            _var = rs.getString("name");
-
-
-        } catch (SQLException e) {
-
-            System.out.println(e.getMessage());
-        }
-
-        return _var;
-    }
-
-    public int getPlaylistID(String name) {
-        int _var = 0;
-
-        String sql = "SELECT playlist_id " +
-                "FROM playlist " +
-                "WHERE name = ?;";
-        try (Connection conn = this.connect(); PreparedStatement ptsmt = conn.prepareStatement(sql)) {
-
-            ptsmt.setString(1, name);
-            ResultSet rs = ptsmt.executeQuery();
-
-
-            _var = rs.getInt("playlist_id");
-
-
-        } catch (SQLException e) {
-
-            System.out.println(e.getMessage());
-        }
-        return _var;
-    }
-
 
     public void deleteTrack(String name) {
 
-        String sql = "DELETE FROM track WHERE name = ?;";
+        String sql = "DELETE FROM tracks WHERE name = ?";
 
 
-        try (Connection conn = this.connect(); PreparedStatement psmt = conn.prepareStatement(sql)) {
+        try (Connection conn = this.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            psmt.setString(1, name);
-            psmt.executeUpdate();
-
+            pstmt.setString(1, name);
+            pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
 
-    }
-
-    public void deletePlaylist(String name) {
-        String sql = "DELETE FROM playlist WHERE name = ?";
-
-
-        try (Connection conn = this.connect(); PreparedStatement psmt = conn.prepareStatement(sql)) {
-
-            psmt.setString(1, name);
-            psmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    public void deleteTrackFromPlaylist(String Track, String Playlist) {
-        String sql = "DELETE FROM playlisttrack\n" +
-                "WHERE track_id IN ( " +
-                " SELECT t.track_id " +
-                " FROM playlisttrack pt " +
-                " INNER JOIN track t USING(track_id) " +
-                " WHERE t.name =  ? ) " +
-                " AND playlist_id IN( " +
-                " SELECT p.playlist_id " +
-                " FROM playlisttrack pt " +
-                " INNER JOIN playlist p USING(playlist_id) " +
-                " WHERE p.name = ?);";
-
-
-        try (Connection conn = this.connect(); PreparedStatement psmt = conn.prepareStatement(sql)) {
-
-            psmt.setString(1, Track);
-            psmt.setString(2, Playlist);
-            psmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
     }
 
 
