@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="02d62529-ce56-4394-8894-4d00c43e89c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__com_google_code_findbugs_annotations_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__com_sk89q_commandbook_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__com_sk89q_worldedit_worldedit_bukkit_7_1_0_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__com_sk89q_worldedit_worldedit_core_7_1_0_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__com_sk89q_worldedit_worldedit_libs_core_7_1_0_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__com_sk89q_worldguard_worldguard_bukkit_7_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__com_sk89q_worldguard_worldguard_core_7_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__com_sk89q_worldguard_worldguard_libs_core_7_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__de_schlichtherle_truezip_6_8_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__io_papermc_paperlib_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__it_unimi_dsi_fastutil_8_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_dev_jna_jna_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truecommons_truecommons_annotations_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truecommons_truecommons_cio_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truecommons_truecommons_io_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truecommons_truecommons_key_console_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truecommons_truecommons_key_default_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truecommons_truecommons_key_macosx_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truecommons_truecommons_key_spec_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truecommons_truecommons_key_swing_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truecommons_truecommons_logging_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truecommons_truecommons_services_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truecommons_truecommons_shed_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_access_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_access_swing_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_comp_ibm437_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_comp_tardriver_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_comp_zip_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_comp_zipdriver_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_driver_file_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_driver_http_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_driver_jar_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_driver_odf_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_driver_tar_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_driver_tar_bzip2_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_driver_tar_gzip_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_driver_tar_xz_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_driver_zip_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_driver_zip_raes_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_kernel_impl_2_13_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_kernel_spec_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_profile_base_2_13_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_java_truevfs_truevfs_profile_default_2_13_0_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__org_apache_commons_commons_compress_1_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_63.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__org_bstats_bstats_bukkit_1_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__org_bukkit_bukkit_1_15_R0_1_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__org_flywaydb_flyway_core_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__org_mozilla_rhino_1_7_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__org_scala_lang_scala_library_2_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__org_tukaani_xz_1_8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__com_destroystokyo_paper_paper_api_1_15_2_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__com_destroystokyo_paper_paper_api_1_15_2_R0_1_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_15_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_15_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/BetterMusic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/BetterMusic.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/src/main/java/play/criticalcraft/bettermusic/BetterMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/src/main/java/play/criticalcraft/bettermusic/BetterMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/src/main/java/play/criticalcraft/bettermusic/Commands/CommanManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/src/main/java/play/criticalcraft/bettermusic/Commands/CommanManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/CheckBiomeSongs.java" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/src/main/java/play/criticalcraft/bettermusic/Commands/subcommands/CheckSongs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/src/main/java/play/criticalcraft/bettermusic/Listeners/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/src/main/java/play/criticalcraft/bettermusic/Listeners/MusicPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/src/main/java/play/criticalcraft/bettermusic/storage/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/src/main/java/play/criticalcraft/bettermusic/storage/Track.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/target/BetterMusic-1.1-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/target/BetterMusic-1.1-SNAPSHOT-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/target/BetterMusic-1.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/target/BetterMusic-1.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/target/classes/play/criticalcraft/bettermusic/Commands/CommanManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/target/classes/play/criticalcraft/bettermusic/Commands/CommanManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/target/classes/play/criticalcraft/bettermusic/Commands/subcommands/CheckBiomeSongs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/target/classes/play/criticalcraft/bettermusic/Listeners/MusicPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/target/classes/play/criticalcraft/bettermusic/Listeners/MusicPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterMusic/target/original-BetterMusic-1.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/BetterMusic/target/original-BetterMusic-1.1-SNAPSHOT.jar" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="ProjectId" id="1b2ioBC6c8vIZ8gtXUXbD0pcz16" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.4" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02d62529-ce56-4394-8894-4d00c43e89c9" name="Default Changelist" comment="" />
+      <created>1587836761133</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587836761133</updated>
+      <workItem from="1587836762360" duration="1436000" />
+      <workItem from="1587987770987" duration="401000" />
+      <workItem from="1587988212833" duration="69000" />
+      <workItem from="1587988347023" duration="25000" />
+      <workItem from="1587988377504" duration="170000" />
+      <workItem from="1587988675012" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587988455159">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1587988455159" />
+    <state x="808" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587988231520">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="808" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1587988231520" />
+    <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1587988257807">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1587988257807" />
+    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1587988475820">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1587988475820" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1587988509626">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1587988509626" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587987825787">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1587987825787" />
+    <state x="343" y="130" key="new project wizard" timestamp="1587988486573">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="343" y="130" key="new project wizard/0.0.1920.1040/-1080.-465.1080.1920@0.0.1920.1040" timestamp="1587988486573" />
+  </component>
+</project>

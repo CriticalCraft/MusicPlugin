@@ -7,12 +7,11 @@ package play.criticalcraft.bettermusic.listener;
 
 import java.util.*;
 
-import com.sk89q.worldedit.math
-        .BlockVector3;
+
+import com.sk89q.worldedit.math.BlockVector3;
 
 import com.sk89q.worldedit.world.World;
 import com.sk89q.worldguard.WorldGuard;
-import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
 import com.sk89q.worldguard.internal.platform.WorldGuardPlatform;
 import com.sk89q.worldguard.protection.managers.RegionManager;
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
@@ -23,9 +22,7 @@ import org.bukkit.Location;
 
 import org.bukkit.event.Listener;
 
-import org.bukkit.plugin.Plugin;
 import org.bukkit.util.Vector;
-import play.criticalcraft.bettermusic.BetterMusic;
 
 public class RegionListener implements Listener {
 
@@ -33,7 +30,6 @@ public class RegionListener implements Listener {
     public RegionListener() {
 
     }
-
 
 
     public List<Region> getApplicableRegions(Location location) {
@@ -54,20 +50,6 @@ public class RegionListener implements Listener {
 
         return regionList;
     }
-
-
-    public WorldGuardPlugin getWorldGuard() {
-        Plugin plugin = BetterMusic.i.getServer().getPluginManager().getPlugin("WorldGuard");
-
-        if (plugin == null || !(plugin instanceof WorldGuardPlugin)) {
-            return null;
-        }
-
-        return (WorldGuardPlugin) plugin;
-    }
-
-
-
 
 
 }

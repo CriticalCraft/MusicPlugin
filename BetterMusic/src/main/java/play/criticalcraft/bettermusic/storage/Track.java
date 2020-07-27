@@ -7,13 +7,16 @@ public class Track {
     private String url;
     private int duration;
     private String region;
+    private String time;
 
 
-    public Track(String name, String url, int duration, String region) {
+    public Track(String name, String url, int duration, String region, String time) {
         this.name = name;
         this.url = url;
         this.duration = duration;
         this.region = region;
+        this.time = time;
+
     }
 
     public String getName() {
@@ -30,5 +33,9 @@ public class Track {
 
     public String getRegion() {
         return region;
+    }
+
+    public String getTime() {
+        return time;
     }
 }
